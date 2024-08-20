@@ -1,15 +1,16 @@
 import pandas as pd
-import numpy as np
-from scipy.stats import spearmanr
 
-file_path = 'D:/Documents/Bioinformatics/Final project paper/final1.xlsx'
+file_path = 'C:/Users/ashle/PycharmProjects/diploma/Real and Predicted.xlsx'
 data = pd.read_excel(file_path)
-print(data.head())
 df = pd.DataFrame(data)
 
 # Calculate Spearman correlation
-correlation, p_value = spearmanr(df.iloc[:, 0].values, df.iloc[:, 1].values)
+spearman_corr = df.corr(method='spearman')
 
-# Display the result
-print(f'Spearman correlation: {correlation}')
-print(f'P-value: {p_value}')
+# Display the Spearman correlation matrix
+print(spearman_corr)
+
+# put into excel file
+output_file = 'spearman_correlation_output.xlsx'
+spearman_corr.to_excel(output_file)
+
