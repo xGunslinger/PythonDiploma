@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 # This is linear regression
 file_path = 'D:/Documents/Bioinformatics/Final project paper/5yu3.xlsx'
 data = pd.read_excel(file_path)
-# print(data.head())
 
 # orbits and B factor
 X = data.iloc[:, 1:16]

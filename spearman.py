@@ -1,5 +1,6 @@
 import pandas as pd
 
+# read file with data
 file_path = 'C:/Users/ashle/PycharmProjects/diploma/Real and Predicted.xlsx'
 data = pd.read_excel(file_path)
 df = pd.DataFrame(data)
